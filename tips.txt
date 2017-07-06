@@ -1,0 +1,18 @@
+1.We have all of the information we need. Manahttan let's us simplify things by considering a case where 
+a storage may store more than one box satisfying its own restriction. ie a storage can only store boxes with
+certrain labels. Hence, consider the three information only: box location, storage location and restriction. 
+
+
+
+
+2.Using the three information from above, find all the possible moves each box can make to be stored in its own 
+proper storage space. 
+
+3.To figure out where each box is able to be stored due to restriction, we may store the box_labels into a different
+array and use them later to see if any restriction was imposed. If not, we may store the boxes anywhere we like. 
+
+4.To minimize the cost, geometrically this will become equivalent to using the storage space where the L2 norm, 
+or the distance to that box to the storage space of interest is minimal. This is simple pythagorus. 
+
+5.Utlize this the information by considering exactly which box was moved to which storage space giving the minimal 
+by using a loop and terminate by adding all the |delta(x)| and |delta(y)| distance giving the Manhattan.
